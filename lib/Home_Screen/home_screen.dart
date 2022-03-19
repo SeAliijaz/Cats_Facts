@@ -47,7 +47,31 @@ class _HomeScreenState extends State<HomeScreen> {
             if (!snapshot.hasData) {
               return Center(child: CircularProgressIndicator());
             }
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Center(
+                    child: Text(
+                      "LOADING...",
+                      style: GoogleFonts.lateef(
+                        textStyle: TextStyle(
+                          fontSize: 35.5,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Center(
+                    child: LinearProgressIndicator(),
+                  ),
+                ],
+              );
+            }
+
             final v = snapshot.data;
+
             return Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
