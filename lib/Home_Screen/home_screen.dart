@@ -85,23 +85,10 @@ class _HomeScreenState extends State<HomeScreen> {
                         children: [
                           Text(
                             "${v.fact}",
-                            style: GoogleFonts.raleway(
+                            style: GoogleFonts.lateef(
                               textStyle: TextStyle(
-                                fontSize: 30,
-                              ),
-                            ),
-                          ),
-                          Divider(),
-                          Container(
-                            width: s.width,
-                            child: Center(
-                              child: Text(
-                                'Length -${v.length}-',
-                                style: GoogleFonts.raleway(
-                                  textStyle: TextStyle(
-                                    fontSize: 30,
-                                  ),
-                                ),
+                                fontSize: 35.5,
+                                fontWeight: FontWeight.w300,
                               ),
                             ),
                           ),
@@ -132,6 +119,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
+                Divider(),
               ],
             );
           },
